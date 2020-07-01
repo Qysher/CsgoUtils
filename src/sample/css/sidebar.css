@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Nunito Light";
+    src: url("fonts/Nunito-Light.ttf");
+}
+
+@font-face {
+    font-family: "Nunito Black";
+    src: url("fonts/Nunito-Black.ttf");
+}
+
+
+.pane {
+    -fx-background-color: rgb(140, 187, 140);
+    -fx-font-family: "Nunito Black";
+    -fx-font-size: 20px;
+}
+
+.button {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-font-family: "Nunito Light";
+    -fx-font-size: 15px;
+    -fx-skin: "skins.SidebarButton";
+    //-fx-text-fill: rgb(255, 255, 255);
+}
+
+.vbox {
+    //-fx-background-color: rgb(20, 20, 20);
+}
