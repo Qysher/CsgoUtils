@@ -52,9 +52,7 @@ public class SteamProfile {
             if(matcher_avatar.find()) this.avatarURL = URL_STEAM_AVATAR + matcher_avatar.group(1);
             try {
                 avatarImage = new Image(new URL(this.avatarURL).openStream());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            } catch (Exception ignored) { }
         } catch (Exception e) {
             e.printStackTrace();
         }

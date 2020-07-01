@@ -1,6 +1,7 @@
 package config;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ConfigSystem {
@@ -157,8 +158,15 @@ public class ConfigSystem {
             try {
                 FileInputStream fileInputStream = new FileInputStream(file);
 
-                // TODO: Replace 'readAllBytes' with a backwards compatible alternative
-                byte[] bytes = fileInputStream.readAllBytes();
+                ArrayList<Integer> integers = new ArrayList<>();
+                int i;
+                while((i = fileInputStream.read()) != -1)
+                    integers.add(i);
+
+                byte[] bytes = new byte[integers.size()];
+                for(int o = 0 ; o < bytes.length ; o++)
+                    bytes[o] = (byte)(int)integers.get(o);
+
                 fileInputStream.close();
                 return bytes;
             } catch (Exception e) {

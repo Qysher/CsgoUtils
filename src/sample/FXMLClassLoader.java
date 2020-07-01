@@ -1,4 +1,4 @@
-package fxml;
+package sample;
 
 import java.net.URL;
 
